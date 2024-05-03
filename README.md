@@ -1,1 +1,3 @@
 # ICS
+
+## Lecture 1 
