@@ -1,3 +1,9 @@
 # ICS
+## Lecture 1 - C
 
-## Lecture 1 - Java
+#include <stdio.h>
+
+int main(void) 
+{
+    printf("hello, world\n");
+}
