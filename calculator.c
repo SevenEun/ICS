@@ -8,10 +8,7 @@ int main(void)
     int x = get_int("x: ");
     int y = get_int("y: ");
 
-    printf("%i\n", add(x, y));
-}
+    float z = (float) x / (float) y;
 
-int add(int a, int b)
-{
-    return a + b;
+    printf("%.3f\n", z);
 }
