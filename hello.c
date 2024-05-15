@@ -1,14 +1,16 @@
-#include <cs50.h>
 #include <stdio.h>
+
+void meow(void);
 
 int main(void) 
 {
-    string answer = get_string("What's your name? ");
-    printf("Hello, %s\n ", answer);
+    for (int i = 0; i < 3; i++)
+    {
+        meow();
+    }
+}
 
-    // char name[100]; // Assuming the name won't exceed 100 characters
-    // printf("Enter your name: ");
-    // scanf("%99s", name); // Read a string from the user, limiting to 99 characters to avoid buffer overflow
-
-    // printf("Hello, %s\n", name); // Print the greeting
+void meow(void)
+{
+    printf("meow\n");
 }
