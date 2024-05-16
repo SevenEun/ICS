@@ -4,5 +4,7 @@
 int main(void) 
 {
     string s = "HI!";
-    printf("%c%c%c\n", s[0], s[1], s[2]);
+
+    /// Every strings in double quotes ends with a backslash zero
+    printf("%i %i %i %i\n", s[0], s[1], s[2], s[3]);
 }
