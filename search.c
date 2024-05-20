@@ -11,7 +11,7 @@ int main(void)
      for (int i = 0; i < 7; i++)
      {
         /// Check if the number is in the array
-        if (numbers[1] == n)
+        if (numbers[i] == n)
         {
             printf("Found\n");
             return 0;
