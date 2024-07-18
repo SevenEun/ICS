@@ -1,3 +1,5 @@
+// Implements a sorted list of numbers using a linked list
+
 #include <cs50.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,20 +34,34 @@ int main(int argc, char *argv[])
         // If list is empty
         if (list == NULL)
         {
-            // This node is the whole list
             list = n;
         } 
 
-        // If list has numbers already
+        // If number belongs at beginning of list
+        else if (n->number < list->number)
+        {
+            n->next = list;
+            list = n;
+        }
+
+        // If numebr belongs later in list
         else
         {
-            // Iterate overnodes in list 
+            // Iterate over nodes in list 
             for (node *ptr = list; ptr != NULL; ptr = ptr->next)
             {
                 // If at end of list
                 if (ptr->next == NULL)
                 {
                     // Append node
+                    ptr->next = n;
+                    break;
+                }
+
+                // If in middle of list 
+                if (n->number < ptr->next->number)
+                {
+                    n->next = ptr->next;
                     ptr->next = n;
                     break;
                 }
