@@ -1,7 +1,4 @@
-# In Python
-from cs50 import get_int
+x = input("x: ")
+y = input("y: ")
 
-x = get_int("x: ")
-y = get_int("y: ")
-
-print(x + y)
+print(int(x) + (y))
