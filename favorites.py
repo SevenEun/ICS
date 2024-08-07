@@ -1,14 +1,10 @@
-import csv
+from cs50 import SQL
 
-from collections import Counter
-
-with open("favorites.csv", "r") as file:
-    reader = csv.DictReader(file)
-    counts = Counter()
-
-    for row in reader:
-        favorite = row["problem"]
-        counts[favorite] += 1
+db = SQL("sqlite:///favorites.db")
 
 favorite = input("Favorite: ")
-print(f"{favorite}: {counts[favorite]}")
+
+rows = db.execute("SELECT COUNT(*) AS n FROM favorites WHERE problem = ?", favorite)
+row = rows[0]
+
+print(row["n"])
